@@ -31,7 +31,7 @@ Configuration is stored in `.env`:
 CONTEXT=dropbox
 IMAGE=debian:stable-slim
 USERACCOUNT=dropbox
-HOSTNAME=docker-dropbox
+HOSTNAME=dropbox-docker
 UID=1000
 GID=100
 ```
