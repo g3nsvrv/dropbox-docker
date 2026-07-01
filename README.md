@@ -1,4 +1,4 @@
-# docker-compose
+# Dropbox as docker-compose
 
 Run the Linux Dropbox client inside Docker with persistent storage and configurable user mapping.
 
