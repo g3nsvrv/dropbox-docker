@@ -1,4 +1,4 @@
-FROM IMAGE=debian:stable-slim
+FROM debian:stable-slim
 
 USER root
 ENV DEBIAN_FRONTEND=noninteractive
