@@ -3,13 +3,14 @@ volumes:
 
 services:
   dropbox:
+    image: ghcr.io/g3nsvrv/dropbox-container:latest
+    container_name: ${HOSTNAME}
     hostname: ${HOSTNAME}
-    build:
-      context: dropbox
-      args:
-        USERACCOUNT: ${USERACCOUNT}
-        GROUPACCOUNT: ${USERACCOUNT}
-        UID: ${UID}
-        GID: ${GID}
+    environment:
+      - USERACCOUNT=${USERACCOUNT}
+      - GROUPACCOUNT=${GROUPACCOUNT}
+      - PUID=${PUID}
+      - PGID=${PGID}
     volumes:
       - dropbox-home:/home/${USERACCOUNT}
+    restart: unless-stopped
